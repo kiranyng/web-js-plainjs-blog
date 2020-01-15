@@ -1,0 +1,270 @@
+/*** DEFAULTS **/
+* {
+    color: black;
+  }
+  
+  .header h2, .footer h2{
+    color: white;
+  }
+  
+  /***** CLASSIC - THEME ******/
+  body.theme-classic{
+      background: #f1f1f1;
+    }
+    
+    .theme-classic .header{
+      background: #717171;
+    }
+    
+    .theme-classic .fakeimg {
+      background-color: #aaa;
+    }
+    
+    .theme-classic .card {
+      background-color: white;
+    }
+    
+    .theme-classic .card.follow-me{
+      background: #ffeb3b;
+      color: white;
+    }
+    
+    .theme-classic .card.follow-me h3{
+      color: black;
+    }
+    
+    .theme-classic .card.follow-me p{
+      color: #717171;
+    }
+  
+    .theme-classic .post-actions > .post-action-item.primary{
+      background: #ffeb3b;
+      color: #333333;
+    }
+    
+    .theme-classic .post-actions > .post-action-item.secondary{
+      background: #717171;
+      color: white;
+    }
+    
+    /* posts - text */
+    .theme-classic .card h2, .theme-classic  .card h3{
+      color: #333333;
+    }
+    
+    .theme-classic .card h5{
+      color: #717171;
+    }
+    
+    .theme-classic .card p{
+      color: #717171;
+    }
+    
+    /* TOP NAV */
+    .theme-classic .topnav {
+      background-color: #333;
+    }
+    
+    .theme-classic .topnav a {
+      color: #f2f2f2;
+    }
+    
+    .theme-classic .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    .theme-classic .topnav a:active, .theme-classic .topnav a.current{
+      background-color: #FFEB3B;
+      color: #333333;
+    }
+    
+    /* footer */
+    .theme-classic .footer {
+      background: #ddd;
+    }
+    
+    
+    /***** GREEN - THEME ******/
+    body.theme-green{
+      background: #e7f3ef;
+      color: #123328;
+    }
+    
+    .theme-green .header{
+      background: #348c6f;
+    }
+    
+    .theme-green .header h2{
+      color: #ffffff;
+    }
+    
+    .theme-green .fakeimg {
+      background-color: #e7f3ef;
+    }
+    
+    .theme-green .card {
+      background-color: white;
+    }
+    
+    .theme-green .card.follow-me{
+      background: #cddc39;
+      color: white!important;
+    }
+    
+    .theme-green .card.follow-me h3{
+      color: #348c6f;
+    }
+    
+    .theme-green .card.follow-me p{
+      color: #ffffff;
+    }
+  
+    .theme-green .post-actions > .post-action-item.primary {
+      background: #cddc39;
+      color: white;
+    }
+    
+    .theme-green .post-actions > .post-action-item.secondary{
+        background: #4dbf99;
+        color: white;
+    }
+    
+    /* posts - text */
+    .theme-green .card h2, .theme-green  .card h3{
+      color:#2b6f58;
+    }
+    
+    .theme-green .card h5{
+      color: #4dbf99;
+    }
+    
+    .theme-green .card p{
+      color:#4dbf99;
+    }
+    
+    /* TOP NAV */
+    .theme-green .topnav {
+      background-color: #4dbf99;
+    }
+    
+    .theme-green .topnav a:hover {
+      background-color: #fff;
+      color: #4dbf99;
+    }
+    .theme-green .topnav a:active, .theme-green .topnav a.current {
+      background-color: #CDDC39;
+      color: #ffffff;
+    }
+    
+    .theme-green .topnav a {
+      color: #ffffff;
+    }
+    
+    /* footer */
+    .theme-green .footer {
+      background: #348c6f;
+      color: white !important;
+    }
+    
+    /***** BLUE - THEME ******/
+    body.theme-blue{
+      background: #ffffff;
+    }
+    
+    .theme-blue .header{
+      background: #0c3f80;
+    }
+    
+    .theme-blue .header h2{
+      color: white;
+    }
+    
+    .theme-blue .fakeimg {
+      background-color: #0c3f80;
+      color: white;
+    }
+    
+    .theme-blue .card {
+      background-color: #d8e9f5;
+    }
+    
+    .theme-blue .card.follow-me{
+      background: #e91e63;
+      color: white;
+    }
+    
+    .theme-blue .card.follow-me h3{
+      color: #0c3f80;
+    }
+    
+    .theme-blue .card.follow-me p{
+      color: white;
+    }
+  
+    .theme-blue .post-actions > .post-action-item.primary{
+      background: #0c3f80;
+      color: white;
+    }
+    
+    .theme-blue .post-actions > .post-action-item.secondary{
+      background:  #e91e63;
+      color: white;
+    }
+    
+    /* posts - text */
+    .theme-blue .card h2, .theme-blue  .card h3{
+      color: #0c3f80;
+    }
+    
+    .theme-blue .card h5{
+      color: #4caef3;
+    }
+    
+    .theme-blue .card p{
+      color: #0c3f80;
+    }
+    
+    /* TOP NAV */
+    .theme-blue .topnav a {
+      color: #f2f2f2;
+    }
+    
+    .theme-blue .topnav {
+      background-color: #4caef3;
+    }
+    
+    .theme-blue .topnav a:hover {
+      background-color: #fdfbfd;
+      color: #4caef3;
+    }
+    
+    .theme-blue .topnav a:active, .theme-blue .topnav a.current {
+      background-color: #E91E63;
+      color: #ffffff;
+    }
+    
+    /* footer */
+    .theme-blue .footer {
+      background: #0c3f80;
+      color: white;
+    }
+    
+    /* inputs */
+    input[type=text], select, textarea {
+      border: 1px solid #ccc;
+    }
+    
+    input[type=submit] {
+      background-color: #ffeb3b;
+      color: #333333;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #f9ef95;
+    }
+    
+    input[type=cancel] {
+      background-color: #717171;
+      color: white;
+    }
