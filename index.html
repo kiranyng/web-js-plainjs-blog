@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/theme.css">
+
+  <!-- LIBRARIES -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+
+  <script type="text/javascript">
+    Handlebars.registerHelper("formatDate", function(datetime, format) {
+      let date = new Date(Date.parse(datetime));
+
+      return date; 
+    });
+  </script>
+
+  <!-- APP SCRIPTS -->
+  <script type="module" src="js/main.js"></script>
+  <title>
+    My personal blog
+  </title>
+</head>
+
+<body class="theme-classic">
+  <div class="header">
+    <h2>My Personal Blog</h2>
+
+    <div class="topnav">
+      <a href="#home" class="current">Home</a>
+      <a href="#new/article">New Article</a>
+      <a href="#delete/article/ ">Clear All</a>
+    </div>
+  </div>
+
+  <div class="themes">
+    <span class="classic-theme" onclick="$('body').attr('class','theme-classic');return false;"></span>
+    <span class="blue-theme" onclick="$('body').attr('class','theme-blue');return false;"></span>
+    <span class="green-theme" onclick="$('body').attr('class','theme-green');return false;"></span>
+  </div>
+
+  <div class="main-content row">
+    <div class="leftcolumn main-view-content">
+      
+    </div>
+    <div class="rightcolumn">
+      <div class="card">
+        <h2>About Me</h2>
+        <div class="fakeimg" style="height:100px;">Image</div>
+        <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      </div>
+      <div class="card follow-me">
+        <h3>Follow Me</h3>
+        <p>Some text..</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <h2>Footer</h2>
+  </div>
+  <!-- TEMPLATES - BEGIN -->
+
+  <script id="list-posts-template" type="text/x-handlebars-template">
+    {{#with this}}
+      {{#if list.length}}
+        {{#each list}}
+          <div class="card blog-post">
+            <h2>{{title}}</h2>
+            <h5>Last updated: {{formatDate timestamp "DD.MM.YYYY HH:mm"}}</h5>
+            <p class="blog-post-text">{{text}}</p>
+            <div class="post-actions">
+                <a class="post-action-item view-post-link primary" href="#view/article/{{id}}" name="View">View</a>
+                <a class="post-action-item edit-post-link secondary" href="#edit/article/{{id}}" name="Edit">Edit</a>
+                <a class="post-action-item delete-post-link secondary" href="#delete/article/{{id}}" name="Delete">Delete</a>
+            </div>
+          </div>
+        {{/each}}
+      {{else}}
+        <div class="card">
+          <p>No Articles exists. Please start creating..</p>
+          <div class="post-actions">
+            <a class="post-action-item create-post-link primary" href="#new/article"" name="Create">Create</a>
+          </div>
+        </div>
+      {{/if}}
+    {{/with}}
+  </script>
+
+
+  <script id="view-post-template" type="text/x-handlebars-template">
+    <div class="card blog-post">
+      <h2>{{title}}</h2>
+      <h5>{{timestamp}}</h5>
+      <p class="blog-post-text">{{text}}</p>
+      <div class="post-actions">
+        <a class="post-action-item edit-post-link primary" href="#edit/article/{{id}}" name="Edit">Edit</a>
+        <a class="post-action-item delete-post-link secondary" href="#delete/article/{{id}}" name="Delete">Delete</a>
+      </div>
+    </div>
+  </script>
+
+
+  <script id="edit-post-template" type="text/x-handlebars-template">
+    <div class="card">
+      <div class="edit-post">
+        <form action="home">
+          {{#if id}}
+            <h2>Edit Article</h2>
+          {{else}}
+            <h2>Create Article</h2>
+          {{/if}}
+          <label for="post_title">Title</label>
+          <input type="text" id="post_title" name="title" placeholder="Title" value="{{title}}"/>
+
+          <label for="post_text">Text</label>
+          <textarea id="post_text" name="text" placeholder="Write something.." style="height:200px">{{text}}</textarea>
+
+          <input type="hidden" name="id" value="{{id}}"/>
+          <div class="post-actions">
+            <input class="post-action-item primary" type="submit" value="Submit"/>
+
+            {{#if id}}
+              <a class="post-action-item delete-post-link secondary" href="#delete/article/{{id}}" name="Delete">Delete</a>
+            {{/if}}
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </script>
+
+
+  <script id="delete-post-template" type="text/x-handlebars-template">
+    <div class="card">
+      <div class="delete-post">
+          <form action="home" data-submit-type="delete">
+              <h2>Confirm delete Article</h2>
+              <h1 class="delete-post-title">Are you sure you want to delete?</h1>
+              <div class="post-actions">
+                  <input class="post-action-item primary" type="submit" value="Yes"/>
+                  <a class="post-action-item cancel-delete-post-link secondary" href="#home" name="No">No</a>
+              </div>
+          </form>
+      </div>
+    </div>
+  </script>
+  <!-- TEMPLATES -  END  -->
+</body>
+
+</html>
