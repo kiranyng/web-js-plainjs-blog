@@ -1,4 +1,4 @@
-# web-js-plainjs-blog
+# web-es6-blog
 Simple web app with bare minimum framework, ui and rest-calls
 
 Browsers tested:-
@@ -11,17 +11,17 @@ Handlebars v4.0.11
 - For templetization
 
 Source files:-
-HTML:>
+HTML:-
 blog.html
 - only html file in this single page application. Holds the actual markup and the templates of the dynamic UI
 
-CSS:>
+CSS:-
 styles.css
 - conatins the styles of the application
 theme.css
 - contains the styles related to colors and themes of the application
 
-JS:>
+JS:-
 router.js
 - Core script file that takes care of routing to the right presenter based on the location hash. 
 Takes care of some generic task like loading the model and saving the model based on the route configuration.
